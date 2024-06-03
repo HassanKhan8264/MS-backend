@@ -13,7 +13,7 @@ const all = {
     PORT: process.env.ENV || process.env.LOCALPORT,
 
     MONGO: {
-        URI: process.env.MONGODB_URI,
+        URI: process.env.MONGODB,
     },
     EMAIL: {
         EMAIL_USER: process.env.EMAIL_USER,
