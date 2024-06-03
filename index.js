@@ -1,8 +1,8 @@
 const cors = require('cors');
 const express = require('express');
 const http = require('http');
-const config = require('./config/config');
-const router = require('./userInfo');
+const config = require('./backend/config/config');
+const router = require('./backend/userInfo/index');
 const bodyParser = require('body-parser');
 const app = express();
 app.use(express.json())
