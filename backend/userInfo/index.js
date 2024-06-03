@@ -5,8 +5,8 @@ const express = require('express')
 const router = express.Router();
 
 
-router.get('/api/getAllUsers', UserCtrl.getAllUsers);
-router.post('/api/addUser', UserCtrl.addUser);
+router.get('/getAllUsers', UserCtrl.getAllUsers);
+router.post('/addUser', UserCtrl.addUser);
 
 
 module.exports = router
