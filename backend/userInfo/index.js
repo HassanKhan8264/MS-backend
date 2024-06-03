@@ -6,8 +6,8 @@ const router = express.Router();
 
 
 
-router.get('/getAllUsers', UserCtrl.getAllUsers)
-router.post('/addUser', UserCtrl.addUser)
+router.get('/api/getAllUsers', UserCtrl.getAllUsers)
+router.post('/api/addUser', UserCtrl.addUser)
 
 module.exports = router
 
