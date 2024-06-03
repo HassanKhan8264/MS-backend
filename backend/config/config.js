@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-const config = dotenv.config();
+const config = dotenv.config({ path: "" });
 
 
 
@@ -10,7 +10,7 @@ if (config.error) {
 
 const all = {
 
-    PORT: process.env.ENV || process.env.LOCALPORT,
+    PORT: process.env.LOCALPORT || 3000,
 
     MONGO: {
         URI: process.env.MONGODB,
