@@ -1,10 +1,10 @@
-const cors = require('cors');
+// const cors = require('cors');
 const express = require('express');
 const config = require('./backend/config/config');
 const router = require('./backend/userInfo/index');
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 
 
 app.use('/api', router);
