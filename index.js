@@ -1,6 +1,6 @@
 const cors = require('cors');
 const express = require('express');
-const config = require("./backend/config/config");
+const config = require("./config");
 const router = require('./backend/userInfo');
 const app = express();
 
