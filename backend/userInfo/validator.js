@@ -3,6 +3,7 @@ const Joi = require('joi');
 const model = require('./../models/schema');
 
 
+
 const validateUserInfo = (user) => {
     const schema = Joi.object({
         name: Joi.string().min(2).max(50).required().messages({
@@ -29,13 +30,13 @@ const validateUserInfo = (user) => {
         }),
         selectedExamControl: Joi.string(),
     });
-    
+
     return schema.validate(user);
 };
 
 const saveUserInfo = async (user, ip) => {
     const { error } = validateUserInfo(user);
-    
+
     if (error) {
         throw new Error(error.details[0].message);
     }
