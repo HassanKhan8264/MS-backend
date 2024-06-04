@@ -1,6 +1,5 @@
 const dotenv = require("dotenv");
 
-// Load environment variables from a .env file if it exists
 dotenv.config();
 
 if (!process.env.MONGODB) {
