@@ -34,7 +34,7 @@ const validateUserInfo = (user) => {
     return schema.validate(user);
 };
 
-const saveUserInfo = async (user, ip) => {
+const saveUserInfo = (user, ip) => {
     const { error } = validateUserInfo(user);
 
     if (error) {
@@ -45,7 +45,7 @@ const saveUserInfo = async (user, ip) => {
         ip: ip
     }
     );
-    await data.save();
+    data.save();
     return data;
 };
 
