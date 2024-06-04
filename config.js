@@ -1,7 +1,7 @@
 const dotenv = require("dotenv");
 const config = dotenv.config();
 
-if (!process.env.MONGODB) {
+if (!process.env.MONGODB || config.error) {
     throw new Error("Missing MONGODB environment variable");
 }
 
