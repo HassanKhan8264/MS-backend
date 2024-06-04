@@ -4,7 +4,7 @@ const config = require("./config");
 const router = require('./backend/userInfo');
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use('/api/v1', router);
 
