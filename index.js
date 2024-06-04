@@ -14,3 +14,4 @@ app.use('/api/v1', router);
 app.listen(config.PORT, () => {
   console.log(`Server is running on port ${config.PORT}`);
 });
+// 
