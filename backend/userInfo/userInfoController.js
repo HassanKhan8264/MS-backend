@@ -3,6 +3,7 @@ const saveUserInfo = require('./validator');
 const model = require('./../models/schema')
 const nodemailer = require('nodemailer');
 const config = require('./../../config');
+const userSchema = require('./validator')
 
 
 const transporter = nodemailer.createTransport({
@@ -30,11 +31,27 @@ const UserCtrl = {
     async addUser(req, res) {
         try {
             const ipAddress = req.ip;
-            const user = req.body;
-            const savedUser = await saveUserInfo(user, ipAddress);
+            let { name, email, phone, message, selectedExamControl } = req.body;
+            const { error } = userSchema.validate(req.body);
+            if (error) {
+                console.log('error: ' + error);
+                // Consider returning a response here if validation fails
+                // return res.status(400).json({ error: error.message });
+            }
 
-            res.json(savedUser);
+            const newUser = await model.create({
+                name,
+                email,
+                phone,
+                message,
+                selectedExamControl,
+                ip: ipAddress,
+            });
 
+            console.log("data saved: ", newUser);
+
+            // Send the response immediately after creating the user
+            res.status(201).json(newUser); // Changed to JSON for consistency
             const mailOptions = {
                 from: {
                     name: 'Hassan khan',
@@ -49,30 +66,30 @@ const UserCtrl = {
                 <table style="width: 100%; border-collapse: collapse;">
                     <tr style="background-color: #f2f2f2;">
                         <td style="padding: 8px; border: 1px solid #ddd;">Name</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">${user.name}</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">${name}</td>
                     </tr>
                     <tr>
                         <td style="padding: 8px; border: 1px solid #ddd;">Phone</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">${user.phone}</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">${phone}</td>
                     </tr>
                     <tr style="background-color: #f2f2f2;">
                         <td style="padding: 8px; border: 1px solid #ddd;">Email</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">${user.email}</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">${email}</td>
                     </tr>
                     <tr style="background-color: #f2f2f2;">
                         <td style="padding: 8px; border: 1px solid #ddd;">IP Address</td>
                         <td style="padding: 8px; border: 1px solid #ddd;">${ipAddress}</td>
                     </tr>
-                    ${user.message ? `
+                    ${message ? `
                     <tr style="background-color: #f2f2f2;">
                         <td style="padding: 8px; border: 1px solid #ddd;">Message</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">${user.message}</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">${message}</td>
                     </tr>
                     ` : ''}
-                    ${user.selectedExamControl ? `
+                    ${selectedExamControl ? `
                     <tr style="background-color: #f2f2f2;">
                         <td style="padding: 8px; border: 1px solid #ddd;">Exam</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">${user.selectedExamControl}</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">${selectedExamControl}</td>
                     </tr>
                     ` : ''}
                 </table>
