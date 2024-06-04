@@ -1,17 +1,12 @@
 const dotenv = require("dotenv");
-const config = dotenv.config({ path: "" });
+const config = dotenv.config();
 
-
-
-
-if (config.error) {
-    throw new Error("Invalid Config");
+if (!process.env.MONGODB) {
+    throw new Error("Missing MONGODB environment variable");
 }
 
 const all = {
-
     PORT: process.env.LOCALPORT || 3000,
-
     MONGO: {
         URI: process.env.MONGODB,
     },
@@ -21,6 +16,5 @@ const all = {
         EMAIL_ADMIN: process.env.EMAIL_ADMIN,
     },
 };
-
 
 module.exports = all;
