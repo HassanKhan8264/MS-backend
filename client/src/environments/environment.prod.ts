@@ -3,7 +3,7 @@ export const environment = {
   production: true,
   server: {
     self: {
-      HOST: "/api/v1", // Corrected backend URL
+      HOST: "", // Corrected backend URL
       getUrl() {
         return `${this.HOST}`;
       },
