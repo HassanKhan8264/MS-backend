@@ -10,10 +10,9 @@ const routes: Routes = [
     children: [
       {
         path: "",
-        redirectTo: "home",
+        redirectTo: "/home",
         pathMatch: "full",
       },
-
       {
         path: "home",
         data: {
