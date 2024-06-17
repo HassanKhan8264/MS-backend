@@ -16,11 +16,6 @@ const routes: Routes = [
 
       {
         path: "home",
-        data: {
-          title: "My Study Solution - Classes Help - Expert Class Help",
-          description:
-            "My Study Solution offers top-notch academic support tailored to meet your needs. Looking to Pay Someone For Your Online Class, Quiz, Assignment, Homework, Exam or Any Other Activity? Get a quote & start today!",
-        },
         loadChildren: () =>
           import("./modules/home/home.module").then((m) => m.HomeModule),
       },
@@ -50,11 +45,7 @@ const routes: Routes = [
       },
       {
         path: "about",
-        data: {
-          title: "About Us - My Study Solution",
-          description:
-            "At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!",
-        },
+
         loadChildren: () =>
           import("./modules/about/about.module").then((m) => m.AboutModule),
       },

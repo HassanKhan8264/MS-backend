@@ -21,7 +21,6 @@ import { OurProcessContentComponent } from "./components/our-process-content/our
 import { ExamsListComponent } from "./components/exams-list/exams-list.component";
 import { UsersListComponent } from "./components/users-list/users-list.component";
 import { SpinnerComponent } from "./components/spinner/spinner.component";
-import { SeoService } from "./services/seo.service";
 
 const components = [
   UserFormComponent,
@@ -41,7 +40,7 @@ const components = [
   SpinnerComponent,
 ];
 
-const services = [CommonService, SubjectsService, SeoService];
+const services = [CommonService, SubjectsService];
 
 @NgModule({
   declarations: [...components],
