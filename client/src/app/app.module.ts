@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { SharedModule } from "./shared/shared.module";
 import { LayoutModule } from "./layout/layout-module";
-import { MetaService } from "./shared/services/meta.service";
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -20,7 +20,7 @@ import { MetaService } from "./shared/services/meta.service";
     SharedModule.forRoot(),
     LayoutModule,
   ],
-  providers: [MetaService],
+  providers: [Title, Meta],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
