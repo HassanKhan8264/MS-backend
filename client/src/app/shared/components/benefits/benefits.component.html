@@ -1,0 +1,109 @@
+<div class="content-container" *ngIf="homePageContent; else aboutPageContent">
+  <div class="inner-div">
+    <div class="left-section">
+      <div class="header">
+        <h1><i class="bi bi-pencil-square"></i> {{ogHeading}}</h1>
+        <p>
+          {{ogSubHeading}}
+        </p>
+        <p>
+          {{ogText}}
+        </p>
+      </div>
+
+      <div class="afford">
+        <h1><i class="bi bi-wallet2"></i> {{ affordHeading}}</h1>
+        <p>
+          {{affordText }}
+        </p>
+      </div>
+      <div class="community">
+        <h1><i class="bi bi-coin"></i> {{ communityHeading }}</h1>
+        <ul>
+          <li *ngFor="let item of communityListItems">{{item}}</li>
+        </ul>
+      </div>
+      <div class="why-we">
+        <h1><i class="bi bi-check-circle"></i> {{ogWhyHeading}}</h1>
+        <ul>
+          <li *ngFor="let item of whyWeList">
+            <strong>{{item.title}}</strong>{{item.description}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="benefits">
+        <h1><i class="bi bi-star"></i> {{benefitsHeading}}</h1>
+        <p>
+          {{ benefitText }}
+        </p>
+        <ul>
+          <li *ngFor="let item of benefitsList">
+            <strong>{{item.title}}</strong> {{item.description}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #aboutPageContent>
+  <div class="content-container">
+    <div class="inner-div">
+      <div class="left-section">
+        <div class="header">
+          <h1 *ngFor="let item of heading">
+            <i class="bi bi-pencil-square"></i>
+            {{ item.text }} <strong [innerHTML]="item.strong"></strong>
+          </h1>
+          <h2><i class="bi bi-check-circle"></i> {{aboutSubHeading }}</h2>
+          <p>
+            {{text }}
+          </p>
+          <ul>
+            <li *ngFor="let item of list">
+              <strong [innerHTML]="item.strong"></strong> {{ item.text }}
+            </li>
+          </ul>
+          <h2><i class="bi bi-check-circle"></i> {{ourStory}}</h2>
+
+          <ul>
+            <li *ngFor="let item of storyList">
+              <strong [innerHTML]="item.strong"></strong> {{ item.text }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-section">
+        <h2><i class="bi bi-check-circle"></i> {{ourValues}}</h2>
+
+        <ul>
+          <li *ngFor="let item of valuesList">
+            <strong [innerHTML]="item.strong"></strong> {{ item.text }}
+          </li>
+        </ul>
+        <h2><i class="bi bi-check-circle"></i> {{ourTeam}}</h2>
+
+        <ul>
+          <li *ngFor="let item of teamList">
+            <strong [innerHTML]="item.strong"></strong> {{ item.text }}
+          </li>
+        </ul>
+        <h2><i class="bi bi-check-circle"></i> {{ourPurpose}}</h2>
+
+        <ul>
+          <li *ngFor="let item of purposeList">
+            <strong [innerHTML]="item.strong"></strong> {{ item.text }}
+          </li>
+        </ul>
+        <h2><i class="bi bi-check-circle"></i> {{ourCommunity}}</h2>
+
+        <ul>
+          <li *ngFor="let item of communityList">
+            <strong [innerHTML]="item.strong"></strong> {{ item.text }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,25 @@
+<div class="content-container">
+  <div class="inner-wrap">
+    <h1>We Cater 90+ Subjects.</h1>
+    <div class="inner-div">
+      <div class="custom-card" *ngFor="let item of courses; let i = index">
+        <div class="left book-icon"></div>
+        <div class="right">
+          <span class="span-text">
+            {{ item.name ? item.name : item }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <button
+      *ngIf="detailBtn"
+      mat-button
+      class="submit-btn"
+      [routerLink]="['/subjects']"
+    >
+      <span class="span-text">
+        View More
+      </span>
+    </button>
+  </div>
+</div>

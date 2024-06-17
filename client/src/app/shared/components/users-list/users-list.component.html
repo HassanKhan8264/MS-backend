@@ -1,0 +1,130 @@
+<div class="content-container">
+  <div class="inner-wrap">
+    <h2>Admin panel - Regular Users</h2>
+    <div class="inner">
+      <table
+        mat-table
+        [dataSource]="dataSource.regularUsers"
+        class="mat-elevation-z8"
+      >
+        <ng-container matColumnDef="index">
+          <th mat-header-cell *matHeaderCellDef>Index</th>
+          <td mat-cell *matCellDef="let element">{{element.index}}</td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+          <td mat-cell *matCellDef="let element">{{element.email}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef>Phone</th>
+          <td mat-cell *matCellDef="let element">{{element.phone}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="ip">
+          <th mat-header-cell *matHeaderCellDef>IP Address</th>
+          <td mat-cell *matCellDef="let element">{{element?.ip}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="content-container">
+  <div class="inner-wrap">
+    <h2>Admin panel - Exam Users</h2>
+    <div class="inner">
+      <table
+        mat-table
+        [dataSource]="dataSource.examUsers"
+        class="mat-elevation-z8"
+      >
+        <ng-container matColumnDef="index">
+          <th mat-header-cell *matHeaderCellDef>Index</th>
+          <td mat-cell *matCellDef="let element">{{element.index}}</td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+          <td mat-cell *matCellDef="let element">{{element.email}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef>Phone</th>
+          <td mat-cell *matCellDef="let element">{{element.phone}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="ip">
+          <th mat-header-cell *matHeaderCellDef>IP Address</th>
+          <td mat-cell *matCellDef="let element">{{element?.ip}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="exams">
+          <th mat-header-cell *matHeaderCellDef>Exams</th>
+          <td mat-cell *matCellDef="let element">
+            {{element.selectedExamControl}}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsExam"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsExam;"></tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="content-container">
+  <div class="inner-wrap">
+    <h2>Admin panel - Message Users</h2>
+    <div class="inner">
+      <table
+        mat-table
+        [dataSource]="dataSource.messUsers"
+        class="mat-elevation-z8"
+      >
+        <ng-container matColumnDef="index">
+          <th mat-header-cell *matHeaderCellDef>Index</th>
+          <td mat-cell *matCellDef="let element">{{element.index}}</td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+          <td mat-cell *matCellDef="let element">{{element.email}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef>Phone</th>
+          <td mat-cell *matCellDef="let element">{{element.phone}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="ip">
+          <th mat-header-cell *matHeaderCellDef>IP Address</th>
+          <td mat-cell *matCellDef="let element">{{element?.ip}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="message">
+          <th mat-header-cell *matHeaderCellDef>Message</th>
+          <td mat-cell *matCellDef="let element">{{ element.message ?  element.message : 'No Message' }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsMess"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsMess;"></tr>
+      </table>
+    </div>
+  </div>
+</div>

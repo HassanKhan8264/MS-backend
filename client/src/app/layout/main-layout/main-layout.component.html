@@ -1,0 +1,14 @@
+<div class="app-viewport">
+  <div class="app-content-wrap d-flex flex-column h-100">
+    <div class="app-content-header">
+      <ss-header></ss-header>
+      <div class="app-subnav-bar">
+        <ss-subnav-primary></ss-subnav-primary>
+      </div>
+    </div>
+    <div class="router-outlet flex-grow-1">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="whatsapp-bottom" (click)="openChat()"></div>
+</div>

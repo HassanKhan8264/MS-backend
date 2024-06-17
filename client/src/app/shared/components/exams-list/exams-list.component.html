@@ -1,0 +1,19 @@
+<div class="content-container">
+  <div class="inner-wrap">
+    <h1>Pick Your Exams</h1>
+    <div class="inner-div">
+      <div
+        class="custom-card"
+        *ngFor="let item of exams; let i = index"
+        (click)="openDialog(item)"
+      >
+        <div class="left book-icon"></div>
+        <div class="right">
+          <span class="span-text">
+            {{ item.name }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

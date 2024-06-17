@@ -1,0 +1,154 @@
+.content-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 41, 77, 0.6);
+  z-index: 1;
+}
+
+.content-container {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  opacity: 1;
+
+  .inner-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 85%;
+    max-width: 1300px;
+    z-index: 100;
+
+    .left {
+      flex-basis: 100%;
+      color: var(--text-white);
+
+      .heading {
+        // line-height: normal;
+      }
+
+      .first-text,
+      .sec-text,
+      .third-text,
+      .heading {
+        margin-top: 20px;
+        // line-height: normal;
+      }
+
+      .sec-text {
+        font-weight: 600 !important;
+      }
+
+      .third-text {
+        font-weight: 600 !important;
+      }
+
+      .ul {
+        margin-top: 20px;
+      }
+    }
+
+    .actions {
+      width: 450px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 10px;
+
+      .submit-btn {
+        display: block;
+        width: 205px;
+        margin-top: 20px;
+        height: 50px !important;
+        border-radius: 10px;
+        background-color: var(--button-color);
+        color: var(--button-text-color);
+        transition: background-color 0.3s, color 0.3s;
+
+        .getBtn {
+          font-weight: 600 !important;
+        }
+
+        &:hover {
+          background-color: var(--background-color);
+          color: var(--button-color);
+        }
+      }
+
+      .submit-btn-wa {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100%;
+        max-width: 205px;
+        margin-top: 20px;
+        margin-right: 30px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: var(--whatsapp-bg);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        color: var(--text-white) !important;
+
+        .whatsapp-icon {
+          cursor: pointer;
+          width: 18px;
+          height: 18px;
+          margin-right: 8px;
+        }
+
+        &:hover .whatsapp-icon {
+          cursor: pointer;
+          background: url("../../../../assets/icons/whatsapp-yellow.svg") 0% 0% no-repeat padding-box;
+          background-size: cover;
+          background-position: center;
+          display: inline-block;
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          color: var(--button-color) !important;
+          border: 1px solid #ccc;
+          background-color: var(--background-color);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .inner-body {
+    flex-direction: column;
+
+    .left,
+    .right {
+      flex-basis: 100%;
+    }
+
+    .first-text,
+    .sec-text,
+    .third-text,
+    .ul {
+      margin-top: 20px;
+    }
+  }
+}
+
+strong {
+  color: var(--button-color);
+}

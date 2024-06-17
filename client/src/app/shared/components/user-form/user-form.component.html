@@ -1,0 +1,148 @@
+<div
+  class="form-body"
+  [ngStyle]="{
+  width:
+    width ? width : 'initial'
+}"
+>
+  <div class="header">
+    <h1>
+      {{data.formHeading ?data.formHeading : formHeading}}
+    </h1>
+  </div>
+  <form
+    #formDirective="ngForm"
+    [formGroup]="userInfoForm"
+    (ngSubmit)="onSubmit(formDirective)"
+  >
+    <div
+      class="input-wrapper"
+      [ngStyle]="{'max-width': data.inputWidth ? '600px' : '100%'}"
+    >
+      <mat-form-field style="width: 100%;" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Ex:John Doe" />
+        <mat-error *ngIf="userInfoForm.controls?.['name'].errors?.['required']">
+          Name is required.
+        </mat-error>
+        <mat-error
+          *ngIf="userInfoForm.controls?.['name'].errors?.['minlength']"
+        >
+          Name should be at least 2 characters long.
+        </mat-error>
+        <mat-error
+          *ngIf="userInfoForm.controls?.['name'].errors?.['maxlength']"
+        >
+          Name should not exceed 50 characters.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="input-wrapper">
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          formControlName="email"
+          placeholder="Ex:jhondoe@gmail.com"
+        />
+        <mat-error
+          *ngIf="userInfoForm.controls?.['email'].errors?.['required']"
+        >
+          Email is required.
+        </mat-error>
+        <mat-error *ngIf="userInfoForm.controls?.['email'].errors?.['email']">
+          Please enter a valid email.
+        </mat-error>
+        <mat-error
+          *ngIf="userInfoForm.controls?.['email'].errors?.['minlength']"
+        >
+          Email should be at least 5 characters long.
+        </mat-error>
+        <mat-error
+          *ngIf="userInfoForm.controls?.['email'].errors?.['maxlength']"
+        >
+          Email should not exceed 255 characters.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="input-wrapper">
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Phone</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="phone"
+          placeholder="+1 (800) 777-7777"
+        />
+        <mat-error
+          *ngIf="userInfoForm.controls?.['phone'].errors?.['required']"
+        >
+          Phone number is required.
+        </mat-error>
+        <mat-error *ngIf="userInfoForm.controls?.['phone'].errors?.['pattern']">
+          Phone number is invalid.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div *ngIf="data.dropMenu && userInfoForm.get('selectedExamControl')">
+      <div class="input-wrapper">
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-label>Select an option</mat-label>
+          <mat-select
+            disableRipple
+            [value]="data.item.name"
+            formControlName="selectedExamControl"
+            (selectionChange)="selectedItem($event)"
+          >
+            <mat-option *ngFor="let item of exams" [value]="item.name"
+              >{{item.name}}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div *ngIf="showMessageField">
+      <div class="input-wrapper">
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-label>Message (Optional)</mat-label>
+          <textarea
+            matInput
+            formControlName="message"
+            placeholder="Enter your message..."
+          ></textarea>
+          <mat-error
+            *ngIf="userInfoForm.controls?.['message']?.errors?.['required']"
+          >
+            Message is required.
+          </mat-error>
+          <mat-error
+            *ngIf="userInfoForm.controls?.['message']?.errors?.['minlength']"
+          >
+            Message should be at least 5 characters long.
+          </mat-error>
+          <mat-error
+            *ngIf="userInfoForm.controls?.['message']?.errors?.['maxlength']"
+          >
+            Message should not exceed 100 characters.
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <button
+      mat-button
+      class="submit"
+      type="submit"
+      [disabled]="userInfoForm.invalid"
+    >
+      {{ data.buttonText ? data.buttonText: submitBtn }}
+    </button>
+  </form>
+  <button
+    *ngIf="cancel"
+    mat-raised-button
+    class="cancel-btn"
+    (click)="onCancel()"
+  >
+    Cancel
+  </button>
+</div>

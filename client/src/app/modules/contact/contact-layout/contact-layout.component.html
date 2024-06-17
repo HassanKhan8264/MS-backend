@@ -1,0 +1,61 @@
+<ss-page-layout>
+  <div class="page-body">
+    <div class="body-inner">
+      <div class="banner">
+        <ss-animated-comp
+          [heading]="heading"
+          [lText]="lText"
+          [subHeading]="subHeading"
+          [fText]="fText"
+          [list]="list"
+          [dialogFormBtn]="false"
+          [imagePath]="bgImage"
+        ></ss-animated-comp>
+      </div>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6">
+            <ss-user-form
+              class="w-50"
+              (payload)="formHandler($event)"
+              [submitBtn]="submitBtnText"
+              [showMessageField]="true"
+              [formHeading]="formHeading"
+              [cancel]="false"
+            ></ss-user-form>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <h2 class="mb-3">Contact Details</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-phone me-2"></i>
+                    <strong>
+                      WhatsApp:
+                    </strong>
+                    <span>
+                      +1 (315) 561-9270
+                    </span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope me-2"></i>
+                    <strong>
+                      Email:
+                    </strong>
+                    <span>
+                      {{email}}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <ss-footer></ss-footer>
+      </div>
+    </div>
+  </div>
+</ss-page-layout>

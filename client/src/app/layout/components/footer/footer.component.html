@@ -1,0 +1,83 @@
+<footer class="text-center text-lg-start text-muted py-custom footer-bg">
+  <section class="footer-sec">
+    <div class="container text-center text-md-start">
+      <div class="row">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h3 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>
+            Company
+          </h3>
+          <span>
+            At My Study Solution, we provide the resources and support students
+            need to excel in exams and educational activities. Our team is here
+            to help with assignments, exam preparation, and difficult concepts
+          </span>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h3 class="text-uppercase fw-bold mb-4">
+            Payment Methods
+          </h3>
+          <div class="methods">
+            <span class="apple-icon"></span>
+            <span class="google-pay-icon"></span>
+            <span class="amExpress-icon"></span>
+            <span class="master-card-icon"></span>
+            <span class="visa-icon"></span>
+          </div>
+        </div>
+        <div class="routes col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h3 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h3>
+          <div class="item" [routerLinkActive]="'active'">
+            <a routerLink="/home">
+              <span>Home</span>
+            </a>
+          </div>
+          <div class="item iw" [routerLinkActive]="'active'">
+            <a routerLink="/subjects">
+              <span>Courses / Subjects </span>
+            </a>
+          </div>
+          <div class="item iw" [routerLinkActive]="'active'">
+            <a routerLink="/exams">
+              <span>Exams Help</span>
+            </a>
+          </div>
+          <div class="item" [routerLinkActive]="'active'">
+            <a routerLink="/process">
+              <span>Our Process</span>
+            </a>
+          </div>
+          <div class="item" [routerLinkActive]="'active'">
+            <a routerLink="/about">
+              <span>About Us</span>
+            </a>
+          </div>
+          <div class="item" [routerLinkActive]="'active'">
+            <a routerLink="/contact">
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h3 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h3>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            <span>
+              {{email}}
+            </span>
+          </p>
+          <p>
+            <i class="fas fa-phone me-3"></i>
+            <span>
+              +1 (315) 561-9270
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>

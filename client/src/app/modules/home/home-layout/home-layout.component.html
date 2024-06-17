@@ -1,0 +1,34 @@
+<ss-page-layout>
+  <div class="page-body">
+    <div class="body-inner">
+      <div class="banner">
+        <ss-animated-comp
+          [heading]="heading"
+          [fTextStrong]="fTextStrong"
+          [sText]="sText"
+          [fList]="fList"
+          [list]="list"
+          [lText]="lText"
+        ></ss-animated-comp>
+      </div>
+      <div class="assist">
+        <ss-online-assistance-offer></ss-online-assistance-offer>
+      </div>
+      <div class="benefits">
+        <ss-benefits></ss-benefits>
+      </div>
+      <div class="stats">
+        <ss-stats-card></ss-stats-card>
+      </div>
+      <div class="list">
+        <ss-subjects-list
+          [homeCourse]="subjects"
+          [detailBtn]="true"
+        ></ss-subjects-list>
+      </div>
+      <div class="footer">
+        <ss-footer></ss-footer>
+      </div>
+    </div>
+  </div>
+</ss-page-layout>

@@ -1,0 +1,20 @@
+.mat-dialog-container {
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.mat-raised-button {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.mat-raised-button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.mat-mdc-button .mdc-button_label {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

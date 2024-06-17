@@ -1,0 +1,58 @@
+<div class="nav-container">
+  <div class="nav-container-wrap">
+    <div class="logo" routerLink="home"></div>
+    <div class="routes" *ngIf="!isMobile">
+      <div class="item" [routerLinkActive]="'active'">
+        <a routerLink="home" class="btn">
+          <span>Home</span>
+        </a>
+      </div>
+      <div class="item" [routerLinkActive]="'active'">
+        <a routerLink="subjects" class="btn">
+          <span>Courses / Subjects</span>
+        </a>
+      </div>
+      <div class="item" [routerLinkActive]="'active'">
+        <a routerLink="exams" class="btn">
+          <span>Exams Help</span>
+        </a>
+      </div>
+      <div class="item" [routerLinkActive]="'active'">
+        <a routerLink="process" class="btn">
+          <span>Our Process</span>
+        </a>
+      </div>
+      <div class="item" [routerLinkActive]="'active'">
+        <a routerLink="about" class="btn">
+          <span>About Us</span>
+        </a>
+      </div>
+      <div class="item" [routerLinkActive]="'active'">
+        <a routerLink="contact" class="btn">
+          <span>Contact Us</span>
+        </a>
+      </div>
+
+      <div class="item">
+        <a class="btn">
+          <span (click)="openDialog()">Get Started</span>
+        </a>
+      </div>
+    </div>
+    <div class="menu-icon" *ngIf="isMobile">
+      <button [matMenuTriggerFor]="menu" *ngIf="isMobile" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="home">Home</button>
+      <button mat-menu-item routerLink="subjects">Courses / Subject</button>
+      <button mat-menu-item routerLink="exams">Exams Help</button>
+      <button mat-menu-item routerLink="process">Our Process</button>
+      <button mat-menu-item routerLink="about">About Us</button>
+      <button mat-menu-item routerLink="contact">Contact Us</button>
+      <button mat-menu-item (click)="openDialog()">Get Started</button>
+    </mat-menu>
+  </div>
+</div>

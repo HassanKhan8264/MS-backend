@@ -1,0 +1,28 @@
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  .inner-wrap {
+    color: var(--text-color);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    max-width: 1300px;
+  }
+
+  .inner {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .inner {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.book-icon {
+  cursor: pointer;
+  background: url("../assets/icons/book-icon.svg") 0% 0% no-repeat padding-box;
+  background-size: contain;
+  background-position: center;
+}
+
+
+.whatsapp-icon {
+  cursor: pointer;
+  background: url("../assets/icons/whatsapp.svg") 0% 0% no-repeat padding-box;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+
+}
+
+
+.apple-icon {
+  background-image: url('../assets/icons/apple-pay.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+
+}
+
+.google-pay-icon {
+  background-image: url('../assets/icons/google-pay.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+
+}
+
+.amExpress-icon {
+  background-image: url('../assets/icons//american-express.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+}
+
+.master-card-icon {
+  background-image: url('../assets/icons/master-card.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+}
+
+.visa-icon {
+  background-image: url('../assets/icons/visa.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+}
+
+
+
+.whatsapp-bottom {
+  background-image: url('../assets/favicon/whatsapp-logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+
+}

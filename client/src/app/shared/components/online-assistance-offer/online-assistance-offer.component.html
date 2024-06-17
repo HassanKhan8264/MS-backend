@@ -1,0 +1,29 @@
+<div class="content-container">
+  <div class="inner-div">
+    <div class="inner-content">
+      <h1 class="heading">
+        {{ offerHeading ? offerHeading:heading }}
+      </h1>
+      <p class="text-content">
+        {{ offerText ? offerText:content }}
+      </p>
+      <div class="actions">
+        <button class="submit-btn-wa" (click)="openWhatsAppChat()">
+          <span class="whatsapp-icon"></span>
+          <span>
+            Chat on WhatsApp
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="form-sec">
+      <ss-user-form
+        width="'100%"
+        [cancel]="false"
+        [submitBtn]="availDiscount"
+        [formHeading]="formHeading"
+        (payload)="handleFormSubmit($event)"
+      ></ss-user-form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.heading {
+  // font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.first-text {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+
+  li {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #e8e8e8;
+    }
+  }
+}
+
+.third-text {
+  font-size: 1.1rem;
+  color: #999;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,64 @@
+<div
+  [@slideUpAnimation]="state"
+  class="content-container"
+  [ngStyle]="{
+    height: height? height : 'initial',
+    'background-image': imagePath? 'url(' + imagePath + ')' : 'url(../../../../assets/images/banner.jpg)'
+  }"
+>
+  <div class="inner-div">
+    <div class="left">
+      <div class="ul" *ngIf="heading">
+        <h1 class="heading" *ngFor="let item of heading">
+          {{ item.text }} <strong [innerHTML]="item.strong"></strong>
+        </h1>
+      </div>
+
+      <div *ngFor="let item of fTextStrong">
+        <p class="first-text">
+          {{ item.text1 }} <strong>{{ item.strong }}</strong> {{ item.text2 }}
+        </p>
+      </div>
+      <p class="first-text" *ngIf="fText">
+        {{fText}}
+      </p>
+      <ul class="ul" *ngIf="fList">
+        <li *ngFor="let item of fList">
+          <strong [innerHTML]="item.strong"></strong>{{ item.text }}
+        </li>
+      </ul>
+      <p class="sec-text" *ngIf="sText">
+        {{sText}}
+      </p>
+      <h2 class="heading" *ngIf="subHeading">
+        {{ subHeading }}
+      </h2>
+      <ul class="ul" *ngIf="list">
+        <li *ngFor="let item of list">
+          {{ item}}
+        </li>
+      </ul>
+      <p class="third-text" *ngIf="lText">
+        {{lText}}
+      </p>
+    </div>
+    <div class="actions" *ngIf="actions">
+      <button
+        *ngIf="dialogFormBtn"
+        mat-button
+        class="submit-btn"
+        (click)="openDialog()"
+      >
+        <span class="getBtn">
+          Get 20% Discount
+        </span>
+      </button>
+      <button class="submit-btn-wa" (click)="openWhatsAppChat()">
+        <span class="whatsapp-icon"></span>
+        <span>
+          Chat on WhatsApp
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
