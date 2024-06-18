@@ -29,11 +29,11 @@ app.get('*', (req, res) => {
 
     // Example: Dynamic meta tags based on route
     if (req.url.includes('home')) {
-      title = 'Page 1 Title';
-      description = 'Description for Page 1';
+      title = 'My Study Solution - Classes Help - Expert Class Help';
+      description = 'My Study Solution offers top-notch academic support tailored to meet your needs. Looking to Pay Someone For Your Online Class, Quiz, Assignment, Homework, Exam or Any Other Activity? Get a quote & start today!';
     } else if (req.url.includes('about')) {
-      title = 'Page 2 Title';
-      description = 'Description for Page 2';
+      title = 'About Us - My Study Solution';
+      description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
     }
 
     // Replace placeholders with dynamic values
