@@ -1,4 +1,3 @@
 User-agent: *
-Disallow:
-
-Sitemap: https://mystudysolution.com/sitemap.xml
+Allow: /
+Sitemap: https://mystudysolution.com/sitemap_index.xml
