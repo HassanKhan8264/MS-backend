@@ -25,8 +25,10 @@ export class AppComponent {
         }
 
         route?.data.subscribe((data) => {
-          const title = data["title"] || "Default Title";
-          const description = data["description"] || "Default Description";
+          const title = data["title"] || "My Study Solution";
+          const description =
+            data["description"] ||
+            "Study Solution provides comprehensive educational resources and tools for students and educators. Explore study guides, exam tips, subject notes, and more.";
           this.updateMetaTags(title, description);
         });
       }

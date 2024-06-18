@@ -6,13 +6,7 @@ const routes: Routes = [
   {
     path: "",
     component: ContactLayoutComponent,
-    children: [
-      {
-        path: "",
-        pathMatch: "full",
-        redirectTo: "content",
-      },
-    ],
+    children: [],
   },
 ];
 @NgModule({

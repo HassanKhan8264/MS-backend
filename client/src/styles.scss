@@ -1,5 +1,5 @@
-@import '@angular/cdk/overlay-prebuilt.css';
-@import './styles/variables.scss';
+@import "@angular/cdk/overlay-prebuilt.css";
+@import "./styles/variables.scss";
 @import "../src/assets/fonts/proxima-nova/stylesheet";
 @import "./styles/color.scss";
 @import "./styles/fonts.scss";
@@ -18,7 +18,6 @@ body {
 
 * {
   line-height: 1.8;
-
 }
 
 body.loader-dialog {
@@ -26,16 +25,13 @@ body.loader-dialog {
   top: 50%;
   left: 50%;
   transform: translate(50%, -50%);
-  /* Adjusted to move to the right */
 }
 
 @media (max-width: 768px) {
   body.loader-dialog {
     top: 40%;
     left: 50%;
-    /* Keep it centered horizontally */
     transform: translate(50%, -40%);
-    /* Adjusted for smaller screens */
   }
 }
 
@@ -43,9 +39,7 @@ body.loader-dialog {
   body.loader-dialog {
     top: 30%;
     left: 50%;
-    /* Keep it centered horizontally */
     transform: translate(50%, -30%);
-    /* Adjusted for even smaller screens */
   }
 }
 
@@ -58,5 +52,135 @@ body.loader-dialog {
   justify-content: center !important;
   align-items: center !important;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+p,
+div,
+input,
+span {
+  font-family: $font-regular !important;
+}
+
+button>span {
+  font-weight: 600 !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-regular !important;
+  line-height: normal !important;
+  font-weight: 600 !important;
+}
+
+h1 {
+  font-size: $font-size-dxl !important;
+  font-family: $font-bold !important;
+}
+
+h2 {
+  font-size: $font-size-xxxl !important;
+  font-family: $font-bold !important;
+}
+
+p {
+  font-size: $font-size-4xl !important;
+}
+
+ul>li {
+  font-size: $font-size-4xl !important;
+  margin-top: 2px !important;
+}
+
+button,
+button>span {
+  cursor: pointer !important;
+}
+
+span {
+  font-size: $font-size-lg !important;
+  font-weight: 400 !important;
+}
+
+// Responsive font sizes
+@media (max-width: 1200px) {
+  h1 {
+    font-size: calc($font-size-dxl - 2px) !important;
+  }
+
+  h2 {
+    font-size: calc($font-size-xxxl - 2px) !important;
+  }
+
+  p {
+    font-size: calc($font-size-4xl - 2px) !important;
+  }
+
+  ul>li {
+    font-size: calc($font-size-4xl - 2px) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: calc($font-size-dxl - 4px) !important;
+  }
+
+  h2 {
+    font-size: calc($font-size-xxxl - 4px) !important;
+  }
+
+  p {
+    font-size: calc($font-size-4xl - 4px) !important;
+
+    ul>li {
+      font-size: calc($font-size-4xl - 4px) !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: calc($font-size-dxl - 6px) !important;
+  }
+
+  h2 {
+    font-size: calc($font-size-xxxl - 6px) !important;
+
+    p {
+      font-size: calc($font-size-4xl - 6px) !important;
+    }
+
+    ul>li {
+      font-size: calc($font-size-4xl - 6px) !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: calc($font-size-dxl - 12px) !important;
+  }
+
+  h2 {
+    font-size: calc($font-size-xxxl - 12px) !important;
+  }
+
+  p {
+    font-size: calc($font-size-4xl - 8px) !important;
+  }
+
+  ul>li {
+    font-size: calc($font-size-4xl - 8px) !important;
+  }
+}

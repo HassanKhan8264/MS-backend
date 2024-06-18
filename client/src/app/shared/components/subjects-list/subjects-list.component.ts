@@ -14,7 +14,6 @@ export class SubjectsListComponent {
   constructor(private subjectsList: SubjectsService) {}
 
   ngOnInit() {
-    // debugger
     this.courses = this.subjectsList.getCourses();
     if (this.homeCourse) {
       this.courses = this.homeCourse;

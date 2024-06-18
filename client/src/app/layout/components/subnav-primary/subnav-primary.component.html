@@ -32,7 +32,6 @@
           <span>Contact Us</span>
         </a>
       </div>
-
       <div class="item">
         <a class="btn">
           <span (click)="openDialog()">Get Started</span>
@@ -44,9 +43,10 @@
         <mat-icon>menu</mat-icon>
       </button>
     </div>
-
-    <mat-menu #menu="matMenu" class="home">
-      <button mat-menu-item routerLink="home" class="home">Home</button>
+    <mat-menu #menu="matMenu" class="no-focus-border">
+      <button mat-menu-item routerLink="home" class="no-focus-border">
+        Home
+      </button>
       <button mat-menu-item routerLink="subjects">Courses / Subject</button>
       <button mat-menu-item routerLink="exams">Exams Help</button>
       <button mat-menu-item routerLink="process">Our Process</button>

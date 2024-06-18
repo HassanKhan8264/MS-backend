@@ -6,13 +6,7 @@ const routes: Routes = [
   {
     path: "",
     component: ExamsComponent,
-    children: [
-      {
-        path: "",
-        pathMatch: "full",
-        redirectTo: "content",
-      },
-    ],
+    children: [],
   },
 ];
 
@@ -20,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ExamsRoutingModule { }
+export class ExamsRoutingModule {}

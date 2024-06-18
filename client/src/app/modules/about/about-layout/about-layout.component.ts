@@ -1,5 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { Meta, Title } from "@angular/platform-browser";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "ss-about-layout",

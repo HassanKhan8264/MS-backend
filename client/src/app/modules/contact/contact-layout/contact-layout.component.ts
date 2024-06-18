@@ -64,7 +64,7 @@ export class ContactLayoutComponent implements OnDestroy, OnInit {
         },
         error: (error) => {
           console.error("An error occurred:", error);
-          dialogRef.close(); // Close the spinner dialog
+          dialogRef.close();
           this.showAlertDialog(
             "Error",
             "There was an error while submitting the form. Please try again later."

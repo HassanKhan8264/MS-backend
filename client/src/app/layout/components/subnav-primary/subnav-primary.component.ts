@@ -18,7 +18,7 @@ export class SubnavPrimaryComponent implements AfterViewInit {
       this.isMobile = window.innerWidth <= 1200;
     };
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call once to set the initial state
+    handleResize();
   }
   openDialog(): void {
     this.openDialogForm.openDialog(false);

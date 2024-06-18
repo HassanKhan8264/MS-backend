@@ -1,12 +1,10 @@
 const dotenv = require('dotenv');
 
-// Determine the environment based on NODE_ENV or a custom logic
-let envFile = '.env.local'; // Default to local environment
+let envFile = '.env.local';
 if (process.env.NODE_ENV === 'production') {
     envFile = '.env.production';
 }
 
-// Load the environment variables from the chosen.env file
 dotenv.config({ path: envFile });
 
 if (!process.env.MONGODB) {
