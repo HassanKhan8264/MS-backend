@@ -6,7 +6,12 @@ const router = require('./backend/userInfo');
 const config = require('./config');
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: 'https://mystudysolution.com',
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api/v1', router);
