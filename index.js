@@ -21,6 +21,16 @@ const angularAppPath = path.join(path.resolve(__dirname), './client/dist');
 // Serve static files
 app.use(express.static(angularAppPath));
 
+
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), './sitemap.xml'));
+});
+
+// Serve the robots.txt file
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(path.join(path.resolve(__dirname), './robots.txt'));
+});
+
 app.get('*', (req, res) => {
   const filePath = path.join(angularAppPath, 'index.html');
   fs.readFile(filePath, 'utf8', (err, htmlData) => {
