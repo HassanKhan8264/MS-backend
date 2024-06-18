@@ -31,25 +31,35 @@ app.get('*', (req, res) => {
     if (req.url.includes('home')) {
       title = 'My Study Solution - Classes Help - Expert Class Help';
       description = 'My Study Solution offers top-notch academic support tailored to meet your needs. Looking to Pay Someone For Your Online Class, Quiz, Assignment, Homework, Exam or Any Other Activity? Get a quote & start today!';
-    } else if (req.url.includes('about')) {
-      title = 'About Us - My Study Solution';
-      description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
     }
+
+    else if (req.url.includes('contact')) {
+      title = 'Online Class Help - Perfect Class Guide - Get Free Quote';
+      description = 'Are you struggling with your Online Classes? Pay Someone For Your Online Class. Our services are 100% secure , ensuring your privacy and academic integrity. Whether you need help with a single task or ongoing support throughout the semester, we are here to help you succeed.';
+    }
+
+
+    else if (req.url.includes('subjects')) {
+      title = 'Need Help For Courses - Online Class Solution';
+      description = 'Want to Pay Someone to Do Your Online Course or Class? My Study Solution has Professionals & Experts designed to empower students to achieve their academic excellence without doing all the hectic work.';
+    }
+
+
     else if (req.url.includes('about')) {
       title = 'About Us - My Study Solution';
       description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
     }
-    else if (req.url.includes('about')) {
-      title = 'About Us - My Study Solution';
-      description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
+
+
+    else if (req.url.includes('process')) {
+      title = 'Need Help In Online Class - Online Class Process';
+      description = 'Are you finding it difficult to keep up with your online classes? At My Study Solution You Can Pay Someone To Take Your Online Class on your behalf. Submit your needs, get matched with one of our Experts, collaborate seamlessly, pay securely, track your progress & achieve your academic goals with ease.';
     }
-    else if (req.url.includes('about')) {
-      title = 'About Us - My Study Solution';
-      description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
-    }
-    else if (req.url.includes('about')) {
-      title = 'About Us - My Study Solution';
-      description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
+
+
+    else if (req.url.includes('exams')) {
+      title = 'Proctor Exam Help - Online Exam Help';
+      description = 'Pay Someone To Do Your Online Exam with My Study Solution. We give assurance that our process is 100% secure. We will take the Exam on your behalf and ensure you get the results you need.';
     }
 
 
