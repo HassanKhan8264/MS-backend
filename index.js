@@ -23,12 +23,12 @@ app.use(express.static(angularAppPath));
 
 
 app.get('/sitemap.xml', (req, res) => {
-  res.sendFile(path.join(path.resolve(__dirname), './sitemap.xml'));
+  res.sendFile(path.join(path.resolve(__dirname), 'sitemap.xml'));
 });
 
 // Serve the robots.txt file
 app.get('/robots.txt', (req, res) => {
-  res.sendFile(path.join(path.resolve(__dirname), './robots.txt'));
+  res.sendFile(path.join(path.resolve(__dirname), 'robots.txt'));
 });
 
 app.get('*', (req, res) => {
