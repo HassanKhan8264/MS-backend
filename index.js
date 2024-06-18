@@ -35,6 +35,23 @@ app.get('*', (req, res) => {
       title = 'About Us - My Study Solution';
       description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
     }
+    else if (req.url.includes('about')) {
+      title = 'About Us - My Study Solution';
+      description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
+    }
+    else if (req.url.includes('about')) {
+      title = 'About Us - My Study Solution';
+      description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
+    }
+    else if (req.url.includes('about')) {
+      title = 'About Us - My Study Solution';
+      description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
+    }
+    else if (req.url.includes('about')) {
+      title = 'About Us - My Study Solution';
+      description = 'At My Study Solution, You Can Pay Someone To Take Your Online Class. Our experienced team is committed to providing reliable & 100% secure services tailored to your needs. With a focus on excellence & integrity, we aim to empower students to reach their full potential educational journey! Join us at My Study Solution now!';
+    }
+
 
     // Replace placeholders with dynamic values
     htmlData = htmlData.replace(/<title>.*<\/title>/, `<title>${title}</title>`)
