@@ -1,10 +1,6 @@
 
 const Joi = require('joi');
 
-
-
-
-
 const userSchema = Joi.object({
     name: Joi.string().min(2).max(50).required().messages({
         "any.required": "Name is required.",
@@ -31,23 +27,6 @@ const userSchema = Joi.object({
     selectedExamControl: Joi.string(),
 });
 
-
-
-
-// const saveUserInfo = (user, ip) => {
-//     const { error } = validateUserInfo(user);
-
-//     if (error) {
-//         throw new Error(error.details[0].message);
-//     }
-//     const data = new model({
-//         ...user,
-//         ip: ip
-//     }
-//     );
-//     data.save();
-//     return data;
-// };
 
 module.exports = userSchema
 

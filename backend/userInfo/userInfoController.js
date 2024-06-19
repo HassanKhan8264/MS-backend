@@ -1,5 +1,4 @@
 
-const saveUserInfo = require('./validator');
 const model = require('./../models/schema')
 const nodemailer = require('nodemailer');
 const config = require('./../../config');
@@ -34,9 +33,8 @@ const UserCtrl = {
             let { name, email, phone, message, selectedExamControl } = req.body;
             const { error } = userSchema.validate(req.body);
             if (error) {
-                console.log('error: ' + error);
                 // Consider returning a response here if validation fails
-                // return res.status(400).json({ error: error.message });
+                return res.status(400).json({ error: error.message });
             }
 
             const newUser = await model.create({
