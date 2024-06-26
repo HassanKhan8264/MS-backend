@@ -9,11 +9,11 @@
 
 From CLI (install these on global levels)
 
-yarn: @1.22.19
-Angular CLI: 13.3.11
-Node: 14.21.3
-Package Manager: npm 6.14.18
-OS: win32 x64
+- yarn: @1.22.19
+- Angular CLI: 13.3.11
+- Node: 14.21.3
+- Package Manager: npm 6.14.18
+- OS: win32 x64
 
 Angular: 13.3.12
 ... common, compiler, compiler-cli, core, forms

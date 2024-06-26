@@ -7,7 +7,7 @@ const config = require('./config');
 
 const app = express();
 const corsOptions = {
-  origin: 'https://mystudysolution.com',
+  origin: ['https://mystudysolution.com', 'http://localhost:4200'],
   optionsSuccessStatus: 200
 };
 
@@ -28,6 +28,7 @@ app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(path.resolve(__dirname), 'robots.txt'));
 });
 
+// this function add title and description dynamic in index.html from backend
 const serveIndexhtml = (req, res) => {
   const filePath = path.join(angularAppPath, 'index.html');
   fs.readFile(filePath, 'utf8', (err, htmlData) => {
@@ -68,7 +69,6 @@ const serveIndexhtml = (req, res) => {
       title = routeMatch.title;
       description = routeMatch.description;
     }
-    // Replace placeholders with dynamic values
     htmlData = htmlData.replace(/<title>.*<\/title>/, `<title>${title}</title>`)
       .replace(/<meta name="description" content=".*">/, `<meta name="description" content="${description}">`);
 

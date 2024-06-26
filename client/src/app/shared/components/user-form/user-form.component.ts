@@ -43,8 +43,6 @@ export class UserFormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log("item agaya", this.data.item);
-    console.log("item agaya", this.data.dropMenu);
     this.exams = this.subjectList.getExams();
     if (this.data.dropDown) {
       this.userInfoForm.addControl(
@@ -100,6 +98,7 @@ export class UserFormComponent implements OnInit {
     };
     const payload: IPayload = this.userInfoForm.value;
 
+    // go to admin panal function
     if (this.isAdminCredentials(payload)) {
       this.navigateToAdmin();
     } else {

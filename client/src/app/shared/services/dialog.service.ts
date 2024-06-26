@@ -38,7 +38,6 @@ export class DialogService implements OnInit, OnDestroy {
     });
 
     dialogRef.componentInstance.payload.subscribe((result) => {
-      console.log("Received form data", result);
       const dialogRefSpinner = this.dialog.open(SpinnerComponent, {
         panelClass: "loader-dialog",
       });
