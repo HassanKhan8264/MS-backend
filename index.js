@@ -7,7 +7,7 @@ const config = require('./config');
 
 const app = express();
 const corsOptions = {
-  origin: ['https://mystudysolution.com', 'http://localhost:4200'],
+  origin: ['http://localhost:4200'],
   optionsSuccessStatus: 200
 };
 

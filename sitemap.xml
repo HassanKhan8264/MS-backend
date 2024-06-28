@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://mystudysolution.com/</loc>
+        <loc>https://example.com/</loc>
         <lastmod>2024-06-18</lastmod>
     </url>
     <url>
-        <loc>https://mystudysolution.com/about</loc>
+        <loc>https://example.com/about</loc>
         <lastmod>2024-06-18</lastmod>
     </url>
     <url>
-        <loc>https://mystudysolution.com/contact</loc>
+        <loc>https://example.com/contact</loc>
         <lastmod>2024-06-18</lastmod>
     </url>
     <url>
-        <loc>https://mystudysolution.com/process</loc>
+        <loc>https://example.com/process</loc>
         <lastmod>2024-06-18</lastmod>
     </url>
     <url>
-        <loc>https://mystudysolution.com/exams</loc>
+        <loc>https://example.com/exams</loc>
         <lastmod>2024-06-18</lastmod>
     </url>
     <url>
-        <loc>https://mystudysolution.com/subjects</loc>
+        <loc>https://example.com/subjects</loc>
         <lastmod>2024-06-18</lastmod>
     </url>
 </urlset>
